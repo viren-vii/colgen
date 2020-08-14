@@ -1,9 +1,9 @@
-function copyFn() {
-    if (document.getElementById('code') == null)
+function copyFn(id) {
+    if (document.getElementById(id) == null)
         return false;
     else {
         var range = document.createRange();
-        range.selectNode(document.getElementById("code"));
+        range.selectNode(document.getElementById(id));
         window.getSelection().removeAllRanges(); // clear current selection
         window.getSelection().addRange(range); // to select text
         document.execCommand("copy");
@@ -12,6 +12,10 @@ function copyFn() {
     }
 }
 var r, g, b, clr;
+
+function getContrast(clr) {
+    return (255 - clr);
+}
 
 function changeClr() {
     r = $('#redClr').val();
@@ -38,5 +42,19 @@ function changeClr() {
 
     clrHEX = '#' + rh + gh + bh;
     $('#clrCodeSpanHEX').html(clrHEX);
+
+    contR = getContrast(r);
+    contG = getContrast(g);
+    contB = getContrast(b);
+    contClrRGB = 'rgb(' + contR + ',' + contG + ',' + contB + ')';
+    $('#contrast').css('background-color', contClrRGB);
+    $('#contClrCodeSpanRGB').html(contClrRGB);
+
+    contRh = contR < 16 ? '0' + contR.toString(16) : contR.toString(16);
+    contGh = contG < 16 ? '0' + contG.toString(16) : contG.toString(16);
+    contBh = contB < 16 ? '0' + contB.toString(16) : contB.toString(16);
+
+    contClrHEX = '#' + contRh + contGh + contBh;
+    $('#contClrCodeSpanHEX').html(contClrHEX);
 
 }

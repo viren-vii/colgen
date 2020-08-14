@@ -50,3 +50,38 @@ div span:hover {
     padding: 20px;
     cursor: pointer;
 }
+
+#contrast {
+    display: table;
+    width: 20vw;
+    height: 20vw;
+    background: black;
+    border: solid 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    transition-property: transform border-radius;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+#contrast:hover {
+    width: 20vw;
+    height: 20vw;
+    transition-property: transform border-radius;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transform: scale(1.1);
+    transform: rotate(360deg);
+    border-radius: 100%;
+}
+
+#contrastText {
+    display: block;
+    width: auto;
+    margin: 50% auto;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#contrastText:hover {
+    cursor: none;
+}
