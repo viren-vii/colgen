@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+    font-family: cursive;
+    font-family: 'Comic Neue', cursive;
+    text-align: center;
+    transition: color 0.5s ease;
+}
+
+span {
+    display: inline;
+    font-size: x-large;
+}
+
+.sliderClr {
+    display: inline-block;
+    margin: 20px auto;
+    width: 40%;
+    height: auto;
+    padding: 10px;
+}
+
+.sliderClr:hover {
+    cursor: pointer;
+}
+
+label {
+    display: inline-block;
+    margin: auto auto;
+    text-align: center;
+    font-size: x-large;
+}
+
+div {
+    display: block;
+    text-align: center;
+    margin: 80px auto;
+    font-size: xx-large;
+}
+
+div span {
+    transition: all 0.5s ease;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+div span:hover {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    cursor: pointer;
+}

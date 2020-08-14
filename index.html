@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="utf-8">
+    <title>Color generator</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <meta name="description" content="HTML generator">
+    <meta name="author" content="Viren-vii">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Select Color!</h1>
+    <label for="redClr">Red:</label><span id="redClrData">0</span><br><input type="range" id="redClr" min="0" max="255" name="redClr" class="sliderClr" value="0" onchange="changeClr()"><br>
+    <label for="greenClr">Green:</label><span id="greenClrData">0</span><br><input type="range" id="greenClr" min="0" max="255" name="greenClr" class="sliderClr" value="0" onchange="changeClr()"><br>
+    <label for="blueClr">Blue:</label><span id="blueClrData">0</span><br><input type="range" id="blueClr" min="0" max="255" name="blueClr" class="sliderClr" value="0" onchange="changeClr()"><br>
+
+    <div id="code" class="code">
+        <span id="clrCodeSpanRGB" onclick="copyFn()">!@#$</span>
+        <span id="clrCodeSpanHEX" onclick="copyFn()">!@#$</span>
+
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
