@@ -32,7 +32,11 @@ function changeClr() {
     r = parseInt(r);
     g = parseInt(g);
     b = parseInt(b);
-    clrHEX = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+    rh = r < 16 ? '0' + r.toString(16) : r.toString(16);
+    gh = g < 16 ? '0' + g.toString(16) : g.toString(16);
+    bh = b < 16 ? '0' + b.toString(16) : b.toString(16);
+
+    clrHEX = '#' + rh + gh + bh;
     $('#clrCodeSpanHEX').html(clrHEX);
 
 }
